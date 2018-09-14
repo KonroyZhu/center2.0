@@ -1,0 +1,10 @@
+{
+  "config":{
+    "p_length":300,
+    "s_length":150,
+    "hidden_size":60,
+    "batch":20,
+    "embedding_dim":100,
+    "in_keep_prob":0.8
+  }
+}
