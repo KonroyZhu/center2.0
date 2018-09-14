@@ -9,6 +9,12 @@ def raw_data(path,enc="utf-8"):
         raw_dt=raw_dt+sen_li
     return raw_dt
 
-raw_dt=raw_data("./segment")
-for dt in raw_dt:
-    print(dt)
+def _2filted(raw_data):
+    # 将中心句标为2的(两句均为中心句)去掉，兼容后续标注的数据集
+    filted=[]
+    for dt in raw_data:
+        if dt[-1] != "2":
+            filted.append(dt)
+    return filted
+
+raw_dt=_2filted(raw_data("segment"))

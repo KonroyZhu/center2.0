@@ -1,4 +1,6 @@
-from model import Center_Net
+from models.BiLSTM import BiLSTM
+from models.Center_Net import Center_Net
 
-center_net=Center_Net()
-center_net.build()
+# model=Center_Net()
+model=BiLSTM()
+model.build()
